@@ -1,8 +1,13 @@
-# My personal neovim config for Nix
+# Nixovim
 
-Welcome to my Neovim configuration crafted for Nix. Feel free to use it as is or extract pieces to help construct your own unique setup.
+Cloned from [Gako358's](https://github.com/Gako358) Neovim repo.
 
-![screenshot](https://github.com/Gako358/archive/blob/main/images/config/nvim.png)
+I don't understand all of it, to say the least,
+but it is a nice framework to start from.
+
+The remainder of this document is unchanged from Gako358's readme.
+
+---
 
 # Usage
 
@@ -167,6 +172,7 @@ This configuration includes a variety of plugins designed to enhance your Neovim
 ### Themes
 
 - [borealis](https://github.com/Gako358/borealis.nvim) a dark colorscheme with multiple options
+-
 
 ### Treesitter
 
