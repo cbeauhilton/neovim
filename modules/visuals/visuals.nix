@@ -168,9 +168,12 @@ in {
         "notify"
       ];
       vim.luaConfigRC.notify = nvim.dag.entryAnywhere ''
-        require('notify').setup ({
-          background_colour = "#000000"
-          })
+        require("notify").setup({
+          background_colour = "#000000",
+        })
+        vim.cmd([[
+          hi NotifyBackground guibg = #000000
+        ]])
       '';
       vim.luaConfigRC.noice = nvim.dag.entryAnywhere ''
         require("noice").setup({
