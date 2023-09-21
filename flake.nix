@@ -200,12 +200,8 @@
       url = "github:lukas-reineke/indent-blankline.nvim";
       flake = false;
     };
-    kommentary = {
-      url = "github:b3nj5m1n/kommentary";
-      flake = false;
-    };
-    comment = {
-      url = "github:numToStr/comment.nvim";
+    comment-nvim = {
+      url = "github:numtostr/comment.nvim";
       flake = false;
     };
     nvim-cursorline = {
@@ -307,7 +303,6 @@
       "indent-blankline"
       "nvim-cursorline"
       "nvim-web-devicons"
-      "kommentary"
       "comment-nvim"
       "noice"
       "nui"
@@ -413,8 +408,7 @@
             eolChar = overrideable null;
             showCurrContext = overrideable true;
           };
-          kommentary.enable = overrideable true;
-          comment.enable = overrideable true;
+          comment-nvim.enable = overrideable true;
           noice = {
             enable = overrideable true;
           };

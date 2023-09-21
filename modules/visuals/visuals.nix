@@ -69,8 +69,7 @@ in {
       };
     };
 
-    kommentary.enable = mkEnableOption "commenting plugin [kommentary].";
-    comment.enable = mkEnableOption "commenting plugin [comment-nvim].";
+    comment-nvim.enable = mkEnableOption "commenting plugin [comment-nvim].";
 
     noice = {
       enable = mkEnableOption "Noice configuration.";
@@ -152,20 +151,10 @@ in {
         }
       '';
     })
-    (mkIf cfg.kommentary.enable {
-      vim.startPlugins = ["kommentary"];
-      vim.luaConfigRC.kommentary = nvim.dag.entryAnywhere ''
-        require("kommentary.config").configure_language("default", {
-          prefer_single_line_comments = true,
-          use_consistent_indentation = true,
-          ignore_whitespace = true,
-        })
-      '';
-    })
-    (mkIf cfg.comment.enable {
+    (mkIf cfg.comment-nvim.enable {
       vim.startPlugins = ["comment-nvim"];
-      vim.luaConfigRC.comment = nvim.dag.entryAnywhere ''
-        require('Comment'.setup()
+      vim.luaConfigRC.comment-nvim = nvim.dag.entryAnywhere ''
+        require('Comment').setup()
       '';
     })
     (mkIf cfg.noice.enable {
@@ -182,7 +171,7 @@ in {
           hi NotifyBackground guibg = #000000
         ]])
 
-        local banned_messages = { {"[Buffer]"}, {"\[Treesitter\]"} }
+        local banned_messages = { {"[Buffer]"}, {"[Treesitter]"} }
         vim.notify = function (msg, ...)
           for _, banned in ipairs(banned_messages) do
             if msg == banned then
