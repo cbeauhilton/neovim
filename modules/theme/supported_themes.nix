@@ -16,6 +16,9 @@ with builtins; let
       type = types.str;
     };
   };
+  toLua = str: "lua << EOF\n${str}\nEOF\n";
+  toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+
 in {
   options.vim.theme = {
     supportedThemes = mkOption {
@@ -29,6 +32,15 @@ in {
       setup = ''
         -- Borealis theme
         require('borealis').load()
+      '';
+    };
+    gruvbox-nvim = {
+      setup = ''
+        require('gruvbox').setup({
+          contrast = "hard",
+          transparent_mode = true,
+        })
+        vim.cmd("colorscheme gruvbox")
       '';
     };
   };

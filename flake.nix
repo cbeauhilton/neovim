@@ -174,6 +174,11 @@
       flake = false;
     };
 
+    gruvbox-nvim = {
+      url = "github:ellisonleao/gruvbox.nvim";
+      flake = false;
+    };
+
     # Rust crates
     crates-nvim = {
       url = "github:Saecki/crates.nvim";
@@ -268,6 +273,7 @@
       "null-ls"
       "nvim-code-action-menu"
       "trouble"
+      "gruvbox-nvim"
       "nvim-treesitter-context"
       "nvim-jdtls"
       "rust-tools"
@@ -413,11 +419,11 @@
         };
         vim.statusline.lualine = {
           enable = overrideable true;
-          theme = overrideable "borealis";
+          theme = overrideable "gruvbox";
         };
         vim.theme = {
           enable = overrideable true;
-          name = overrideable "borealis";
+          name = overrideable "gruvbox-nvim";
         };
         vim.telescope.enable = overrideable true;
         vim.treesitter.context.enable = overrideable true;
