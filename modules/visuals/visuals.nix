@@ -174,6 +174,16 @@ in {
         vim.cmd([[
           hi NotifyBackground guibg = #000000
         ]])
+
+        local banned_messages = { "[Buffer]" "[Treesitter]" }
+        vim.notify = function (msg, ...)
+          for _, banned in ipairs(banned_messages) do
+            if msg == banned then
+              return
+            end
+          end
+          require("notify")(msg, ...)
+        end
       '';
       vim.luaConfigRC.noice = nvim.dag.entryAnywhere ''
         require("noice").setup({

@@ -45,6 +45,7 @@ in {
 
         # Clear Search
         "<leader>cc" = ":noh<CR>";
+        "<C-/>" = ":noh<CR>";
       }
       else {};
 
