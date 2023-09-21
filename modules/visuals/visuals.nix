@@ -167,10 +167,12 @@ in {
         "nui"
         "notify"
       ];
-      vim.luaConfigRC.noice = nvim.dag.entryAnywhere ''
+      vim.luaConfigRC.notify = nvim.dag.entryAnywhere ''
         require('notify').setup ({
           background_colour = "#000000"
           })
+      '';
+      vim.luaConfigRC.noice = nvim.dag.entryAnywhere ''
         require("noice").setup({
           lsp = {
             override = {
