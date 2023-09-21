@@ -380,7 +380,7 @@
             enable = overrideable true;
           };
           sql = {
-            enable = overrideable true;
+            enable = overrideable false; # needs updated to sqlls
             extraDiagnostics.enable = overrideable false;
           };
           ts.enable = overrideable true;
