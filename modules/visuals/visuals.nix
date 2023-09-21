@@ -175,7 +175,7 @@ in {
           hi NotifyBackground guibg = #000000
         ]])
 
-        local banned_messages = { "[Buffer]" "[Treesitter]" }
+        local banned_messages = { {"[Buffer]"}, {"[Treesitter]"} }
         vim.notify = function (msg, ...)
           for _, banned in ipairs(banned_messages) do
             if msg == banned then
