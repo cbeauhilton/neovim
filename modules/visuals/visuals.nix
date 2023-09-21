@@ -70,6 +70,7 @@ in {
     };
 
     kommentary.enable = mkEnableOption "commenting plugin [kommentary].";
+    comment.enable = mkEnableOption "commenting plugin [comment-nvim].";
 
     noice = {
       enable = mkEnableOption "Noice configuration.";
@@ -161,6 +162,12 @@ in {
         })
       '';
     })
+    (mkIf cfg.comment.enable {
+      vim.startPlugins = ["comment-nvim"];
+      vim.luaConfigRC.comment = nvim.dag.entryAnywhere ''
+        require('Comment'.setup()
+      '';
+    })
     (mkIf cfg.noice.enable {
       vim.startPlugins = [
         "noice"
@@ -175,7 +182,7 @@ in {
           hi NotifyBackground guibg = #000000
         ]])
 
-        local banned_messages = { {"[Buffer]"}, {"[Treesitter]"} }
+        local banned_messages = { {"[Buffer]"}, {"\[Treesitter\]"} }
         vim.notify = function (msg, ...)
           for _, banned in ipairs(banned_messages) do
             if msg == banned then

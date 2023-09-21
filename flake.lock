@@ -96,6 +96,22 @@
         "type": "github"
       }
     },
+    "comment": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1691409559,
+        "narHash": "sha256-+dF1ZombrlO6nQggufSb0igXW5zwU++o0W/5ZA07cdc=",
+        "owner": "numToStr",
+        "repo": "comment.nvim",
+        "rev": "0236521ea582747b58869cb72f70ccfa967d2e89",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numToStr",
+        "repo": "comment.nvim",
+        "type": "github"
+      }
+    },
     "crates-nvim": {
       "flake": false,
       "locked": {
@@ -811,6 +827,7 @@
         "cmp-path": "cmp-path",
         "cmp-treesitter": "cmp-treesitter",
         "cmp-vsnip": "cmp-vsnip",
+        "comment": "comment",
         "crates-nvim": "crates-nvim",
         "dropbar-nvim": "dropbar-nvim",
         "fidget": "fidget",

@@ -204,6 +204,10 @@
       url = "github:b3nj5m1n/kommentary";
       flake = false;
     };
+    comment = {
+      url = "github:numToStr/comment.nvim";
+      flake = false;
+    };
     nvim-cursorline = {
       url = "github:yamatsum/nvim-cursorline";
       flake = false;
@@ -304,6 +308,7 @@
       "nvim-cursorline"
       "nvim-web-devicons"
       "kommentary"
+      "comment-nvim"
       "noice"
       "nui"
       "notify"
@@ -409,6 +414,7 @@
             showCurrContext = overrideable true;
           };
           kommentary.enable = overrideable true;
+          comment.enable = overrideable true;
           noice = {
             enable = overrideable true;
           };
