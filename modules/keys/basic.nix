@@ -32,6 +32,7 @@ in {
         "<leader>cpd" = ":Copilot disable<CR>";
         "<leader>cpe" = ":Copilot enable<CR>";
         "<leader>cps" = ":Copilot split<CR>";
+        "<leader>gy"  = "<cmd>Yazi<CR>";
 
         # Return to last edit buffer.
         "<S-Tab>" = ":e #<CR>";

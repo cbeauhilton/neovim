@@ -90,7 +90,7 @@
       flake = false;
     };
 
-    # Langauge server (use master instead of nixpkgs)
+    # Language server (use master instead of nixpkgs)
     rnix-lsp.url = "github:nix-community/rnix-lsp";
     nil = {
       url = "github:oxalica/nil";
@@ -101,6 +101,10 @@
     # Filetrees
     nvim-tree-lua = {
       url = "github:kyazdani42/nvim-tree.lua";
+      flake = false;
+    };
+    yazi-nvim = {
+      url = "github:DreamMaoMao/yazi.nvim";
       flake = false;
     };
 
@@ -283,6 +287,7 @@
       "nvim-dap-ui"
       "telescope"
       "nvim-tree-lua"
+      "yazi-nvim"
       "lualine"
       "nvim-compe"
       "nvim-cmp"
