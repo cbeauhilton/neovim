@@ -167,8 +167,9 @@ in {
         require("notify").setup({
           background_colour = "#000000",
           render = "compact",
-          timeout = "2000",
-          stages = "fade"
+          timeout = 2000,
+          stages = "fade",
+          top_down = false
         })
         vim.cmd([[
           hi NotifyBackground guibg = #000000
