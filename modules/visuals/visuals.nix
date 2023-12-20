@@ -166,6 +166,9 @@ in {
       vim.luaConfigRC.notify = nvim.dag.entryAnywhere ''
         require("notify").setup({
           background_colour = "#000000",
+          render = "compact",
+          timeout = "2000",
+          stages = "fade"
         })
         vim.cmd([[
           hi NotifyBackground guibg = #000000
